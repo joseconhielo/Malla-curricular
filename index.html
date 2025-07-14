@@ -1,1 +1,99 @@
+<html lang='es'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <title>Malla Curricular Interactiva</title>
+  <link rel='stylesheet' href='styles.css'>
+</head>
+<body>
+  <header>
+    <h1>Malla Curricular Interactiva</h1>
+    <p>Haz clic en cada ramo para marcarlo como aprobado. Al aprobar un ramo, se desbloquearán los cursos que lo requieran.</p>
+  </header>
 
+  <main>
+    <section class='semester'>
+      <h2>Primer semestre</h2>
+      <div class='courses'>
+        <div id='civilizacion_I' class='course' data-prereqs=''>CORE: Civilización Contemporánea I</div>
+        <div id='matematicas_I' class='course' data-prereqs=''>Matemáticas Avanzadas I</div>
+        <div id='datos_I' class='course' data-prereqs=''>Razonamiento Cuantitativo con Datos I</div>
+        <div id='intro_micro' class='course' data-prereqs=''>Introducción a la Microeconomía</div>
+        <div id='management' class='course' data-prereqs=''>Management</div>
+      </div>
+    </section>
+
+    <section class='semester'>
+      <h2>Segundo semestre</h2>
+      <div class='courses'>
+        <div id='core_civilizacion_II' class='course' data-prereqs='civilizacion_I'>CORE: Civilización Contemporánea II</div>
+        <div id='escritura_argumentativa' class='course' data-prereqs=''>CORE: Escritura argumentativa</div>
+        <div id='matematicas_II' class='course' data-prereqs='matematicas_I'>Matemáticas Avanzadas II</div>
+        <div id='datos_II' class='course' data-prereqs='datos_I'>Razonamiento Cuantitativo con Datos II</div>
+        <div id='intro_macro' class='course' data-prereqs=''>Introducción a la Macroeconomía</div>
+        <div id='taller_emprendimiento' class='course' data-prereqs='management'>Taller de Emprendimiento Tecnológico y Sustentable</div>
+        <div id='practica_profesional' class='course' data-prereqs=''>Práctica Profesional</div>
+      </div>
+    </section>
+
+    <section class='semester'>
+      <h2>Tercer semestre</h2>
+      <div class='courses'>
+        <div id='literatura_I' class='course' data-prereqs='core_civilizacion_II'>CORE: Literatura y Humanidades I</div>
+        <div id='electivo_historia' class='course' data-prereqs='core_civilizacion_II'>Electivo Historia</div>
+        <div id='microeconomia' class='course' data-prereqs='intro_micro'>Microeconomía</div>
+        <div id='stats_ds' class='course' data-prereqs='datos_II'>Estadísticas y Data Science</div>
+        <div id='personas_org' class='course' data-prereqs='management'>Personas y Organizaciones</div>
+        <div id='taller_intro_negocios' class='course' data-prereqs=''>Taller de Introducción a los Negocios</div>
+      </div>
+    </section>
+
+    <section class='semester'>
+      <h2>Cuarto semestre</h2>
+      <div class='courses'>
+        <div id='literatura_II' class='course' data-prereqs='literatura_I'>CORE: Literatura y Humanidades II</div>
+        <div id='disciplinar_filosofia' class='course' data-prereqs='core_civilizacion_II'>Disciplinar Filosofía</div>
+        <div id='psicologia_social' class='course' data-prereqs=''>Psicología social</div>
+        <div id='org_industrial' class='course' data-prereqs=''>Organización Industrial</div>
+        <div id='contabilidad' class='course' data-prereqs='management'>Contabilidad</div>
+        <div id='marketing' class='course' data-prereqs=''>Marketing</div>
+        <div id='exp_oral_I' class='course' data-prereqs=''>Taller de Expresión Oral I</div>
+      </div>
+    </section>
+
+    <section class='semester'>
+      <h2>Quinto semestre</h2>
+      <div class='courses'>
+        <div id='etica_core' class='course' data-prereqs='core_civilizacion_II'>Ética Core</div>
+        <div id='electivo_ciencias' class='course' data-prereqs='core_civilizacion_II'>Electivo Ciencias</div>
+        <div id='econometria' class='course' data-prereqs=''>Econometría</div>
+        <div id='derecho_institucionalidad' class='course' data-prereqs=''>Derecho e Institucionalidad</div>
+        <div id='managerial_economics' class='course' data-prereqs=''>Managerial Economics</div>
+        <div id='finanzas' class='course' data-prereqs='contabilidad'>Finanzas</div>
+        <div id='liderazgo' class='course' data-prereqs='personas_org'>Liderazgo</div>
+        <div id='taller_lanzamiento_I' class='course' data-prereqs=''>Taller de Lanzamiento I</div>
+      </div>
+    </section>
+
+    <section class='semester'>
+      <h2>Sexto semestre</h2>
+      <div class='courses'>
+        <div id='core_ciencias' class='course' data-prereqs='core_civilizacion_II'>CORE: Ciencias</div>
+        <div id='core_arte_humanidades' class='course' data-prereqs='core_civilizacion_II'>CORE: Arte y Humanidades</div>
+        <div id='gestion_operaciones' class='course' data-prereqs=''>Gestión de Operaciones</div>
+        <div id='sociedad_cultura_politica' class='course' data-prereqs=''>Sociedad, Cultura y Política</div>
+        <div id='analisis_macro_global' class='course' data-prereqs='intro_macro'>Análisis Macroeconómico Global</div>
+        <div id='estrategia' class='course' data-prereqs='managerial_economics'>Estrategia</div>
+        <div id='taller_lanzamiento_II' class='course' data-prereqs='taller_lanzamiento_I'>Taller de Lanzamiento II</div>
+        <div id='exp_oral_II' class='course' data-prereqs='exp_oral_I'>Taller de Expresión Oral II</div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <small>Haz clic para aprobar un ramo. Los datos se guardan en tu navegador.</small>
+  </footer>
+
+  <script src='script.js'></script>
+</body>
+</html>
