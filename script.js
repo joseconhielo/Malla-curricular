@@ -1,3 +1,4 @@
+// script.js
 (function () {
   const courses = [...document.querySelectorAll('.course')];
   const courseMap = new Map();
